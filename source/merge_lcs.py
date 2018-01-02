@@ -40,12 +40,13 @@ def add_lcs(lc_locs):
     return tot_counts, tot_time, tot_bg, tot_netcount
 
 
-def get_table(year_data, lc_en='full'):
+def get_table(year_data, lc_en='full', num=''):
     """return HDU table in the given energy."""
     if lc_en == 'full':
-        lclocs = get_lcfiles(year_data, 'source_1as_phase.lc')
+        lclocs = get_lcfiles(year_data, 'source'+num+'_1as_phase.lc')
     else:
-        lclocs = get_lcfiles(year_data, 'source_1asphase_'+lc_en+'en.lc')
+        lclocs = get_lcfiles(year_data, 'source'+num+'_1asphase_' +
+                             lc_en+'en.lc')
     totcounts, tot_time, tot_bg, tot_netcount = add_lcs(lclocs)
     tot_netcount[np.where(tot_netcount < 0)] = 0.0
     sb_area_ratio = (totcounts - tot_netcount)*1.0/tot_bg
@@ -62,7 +63,12 @@ def get_table(year_data, lc_en='full'):
                  ((totcounts - totc_down)**2 +
                   totbg_errdown**2*sb_area_ratio**2)**0.5)
     netc_down[np.where(netc_down < 0)] = 0.0
-    phase = fits.getdata(lclocs[0])['phase_corr']
+    if num == '':
+        phase = fits.getdata(lclocs[0])['phase_corr']
+    elif num == '0':
+        phase = fits.getdata(lclocs[0])['phase0']
+    else:
+        phase = fits.getdata(lclocs[0])['phase0_'+num]
     phase_col = fits.Column(name='phase', format='E', array=phase)
     time_col = fits.Column(name='total_time', format='D', array=tot_time)
     count_col = fits.Column(name='counts', format='E', array=totcounts)
@@ -77,7 +83,7 @@ def get_table(year_data, lc_en='full'):
                                               netcd_col],
                                              name=lc_en+' energy')
     if not np.sum(tot_netcount) == 0:
-        plotfig(year_data+'_'+lc_en+'.png', 'phase', 'net counts', phase,
+        plotfig(year_data+'_'+num+lc_en+'.png', 'phase', 'net counts', phase,
                 tot_netcount, netc_up, netc_down)
     return hdutable
 
@@ -86,14 +92,20 @@ def make_fits(year_data):
     """Make a fits file from hdu tables"""
     prheader = fits.Header()
     prheader['EXTEND'] = 'T'
-    hdu0 = fits.PrimaryHDU(header=prheader)
-    hdu1 = get_table(year_data)
-    hdu2 = get_table(year_data, 'filt')
-    hdu3 = get_table(year_data, 'vlow')
-    hdu4 = get_table(year_data, 'low')
-    hdu5 = get_table(year_data, 'high')
-    hdulist = fits.HDUList([hdu0, hdu1, hdu2, hdu3, hdu4, hdu5])
-    hdulist.writeto(year_data+'/merged_lcs.fits', overwrite=True)
+    nums = ['', '0', '1', '2', '3']
+    for num in nums:
+        print num
+        hdu0 = fits.PrimaryHDU(header=prheader)
+        hdu1 = get_table(year_data, 'full', num)
+        if year_data == "2005":
+            hdulist = fits.HDUList([hdu0, hdu1])
+        else:
+            hdu2 = get_table(year_data, 'filt', num)
+            hdu3 = get_table(year_data, 'vlow', num)
+            hdu4 = get_table(year_data, 'low', num)
+            hdu5 = get_table(year_data, 'high', num)
+            hdulist = fits.HDUList([hdu0, hdu1, hdu2, hdu3, hdu4, hdu5])
+        hdulist.writeto(year_data+'/merged_lcs'+num+'.fits', overwrite=True)
 
 
 def plotfig(name, xlabel, ylabel, xdata, ydata, yup, ydown):
