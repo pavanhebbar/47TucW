@@ -45,7 +45,7 @@ def getphase(time_f, time_p=66643148.677248):
         phase += freq_d*(time_f - time_p)**(i+1)*1.0/prod
         prod = prod*(i+2.0)
     phase_0 = (time_f - time_p)*freq_arr[0]
-    phase0_1 = (time_f - time_p)*8.6998468*10**-5
+    phase0_1 = (time_f - time_p)*8.7059474484*10**-5
     phase0_2 = (time_f - time_p)*8.70594722*10**-5
     phase0_3 = (time_f - time_p)*8.70594646*10**-5
     return phase, phase_0, phase0_1, phase0_2, phase0_3
