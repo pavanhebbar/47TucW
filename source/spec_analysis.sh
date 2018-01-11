@@ -31,6 +31,7 @@ do
 		maskfile=$(pget dmkeypar value)
 		pset specextract badpixfile="../../../"$year_data"_data/$obs_id/repro/"$bpixfile""
 		pset specextract mskfile="../../../"$year_data"_data/$obs_id/repro/"$maskfile""
+		pset specextract energy_wmap=300:8000
 		specextract "source_1as_high.evt[sky=region(47TucW_1as_phy.reg)]" source_1as_high clob+ mode=h
 		punlearn dmgti
 		punlearn gti_align
@@ -46,6 +47,7 @@ do
 		gti_align mode=h clob+
 		dmcopy source_1as_bary.evt"[@transit_align.gti]" source_1as_trans.evt clob+
 		dmcopy bkg_bary.evt"[@high_align.gti]" bkg_trans.evt clob+
+		punlearn ardlib
 		pset specextract bkgfile="bkg_trans.evt[sky=region(47TucW_bkg_phy.reg)]"
 		pset specextract badpixfile="../../../"$year_data"_data/$obs_id/repro/"$bpixfile""
 		pset specextract mskfile="../../../"$year_data"_data/$obs_id/repro/"$maskfile""

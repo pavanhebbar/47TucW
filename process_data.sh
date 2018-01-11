@@ -17,7 +17,8 @@ do
 		echo "Processing folder "$obs_id""
 		mkdir ../source/"$year"/"$obs_id"
 		cd "$obs_id"/repro
-		evtfile=$(find . -name "*_evt2.fits")
+		evtfile=$(find $PWD -name "*_evt2.fits")
+		echo $evtfile
 		#Get the region files
 		cp /Users/pavanrh/UofA_projects/47TucW_study/"$year_data"/"$obs_id"/repro/47TucW_* ./
 		cp /Users/pavanrh/UofA_projects/47TucW_study/"$year_data"/"$obs_id"/repro/47TucW_* ../../../source/"$year"/"$obs_id"/
@@ -38,8 +39,10 @@ do
 			bkg_phy=$(find . -name "*as_phy.reg")
 		fi	
 		echo "Region files stored"
-		dmcopy infile=""$evtfile"[sky=region("$source_phy")]" outfile=../../../source/"$year"/"$obs_id"/source_1as.evt clobber=yes
-		dmcopy infile=""$evtfile"[sky=region("$bkg_phy")]" outfile=../../../source/"$year"/"$obs_id"/background.evt clobber=yes
+		cd ../../../source/"$year"/"$obs_id"
+		dmcopy infile=""$evtfile"[sky=region("$source_phy")]" outfile=source_1as.evt clobber=yes
+		dmcopy infile=""$evtfile"[sky=region("$bkg_phy")]" outfile=background.evt clobber=yes
+		cd ../../../"$year_data"/"$obs_id"/repro
 		echo "Dmcopy done"
 		orbitfile=$(find $(cd ../primary; pwd) -name 'orbit*')
 		asolfile=$(find $PWD -name 'pcad*')

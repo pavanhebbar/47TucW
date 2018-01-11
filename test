@@ -1,0 +1,852 @@
+ 
+--------------------------------------------------------------------------------
+Header keys for block EVENTS
+--------------------------------------------------------------------------------
+ 
+ --  COMMENT                                            +------------------+
+ --  COMMENT                                            | AXAF FITS   File |
+ --  COMMENT                                            +------------------+
+ --  COMMENT               *********************************************************
+ --  COMMENT               >    This file is written following certain AXAF-ASC    <
+ --  COMMENT               >    conventions which are documented in ASC-FITS-2.0   <
+ --  COMMENT               *********************************************************
+ --  COMMENT                                     / Configuration control block--------------------
+0001 ASOLFILE             pcadf149706672N003_asol1.fits  String       
+0002 THRFILE              acisD1996-11-01evtspltN0002.fits String       
+ --  COMMENT                character at the end of each substring which is then continued
+ --  COMMENT                on the next keyword which has the name CONTINUE.
+0003 ORIGIN               ASC                            String       Source of FITS file
+0004 CREATOR              acis_process_events - CIAO 4.9 String       tool that created this output
+0005 ASCDSVER             CIAO 4.9                       String       ASCDS version number
+0006 MJD_OBS                  52546.7076415730           Real8        Modified Julian date of observation
+0007 DS_IDENT             ADS/Sa.CXO#obs/02735           String       dataset identifier
+0008 TLMVER               P009                           String       Telemetry revision number (IP&CL)
+0009 REVISION             3                              Int4         Processing version of data
+0010 CHECKSUM             mVHfpVGemVGemVGe               String       HDU checksum updated 2017-12-26T05:49:07
+0011 DATASUM              2010530746                     String       data unit checksum updated 2017-12-26T05:49:07
+0012 CONTENT              EVT1                           String       What data product
+0013 HDUSPEC              ACIS Telemetry Products: Level 0 to ASC Archive ICD Rev 2.11 String       ICD r
+0014 HDUDOC               ASC-FITS-2.0: McDowell, Rots: ASC FITS File Designers Guide String       
+0015 HDUVERS              1.0.0                          String       
+0016 HDUCLASS             OGIP                           String       
+0017 HDUCLAS1             EVENTS                         String       
+0018 HDUCLAS2             ALL                            String       
+0019 PIX_ADJ              EDSER                          String       Subpixel adjustment algorithm
+0020 RAND_SKY                                0           Real8        
+0021 SUBPIXFL             acisD1999-07-22subpixN0001.fits String       
+0022 RAND_PI                      1.0                    Real8        
+ --  COMMENT              This FITS file may contain long string keyword values that are
+ --  COMMENT              continued over multiple keywords.  This convention uses the  '&'
+ --  COMMENT              character at the end of a string which is then continued
+ --  COMMENT              on subsequent keywords whose name = 'CONTINUE'
+ --  COMMENT                                     / Time information block-------------------------
+0023 DATE                 2017-12-25T19:06:55            String       Date and time of file creation
+0024 DATE-OBS             2002-09-29T16:59:00            String       Observation start date
+0025 OBS_MODE             POINTING                       String       Observation mode
+0026 DATE-END             2002-09-30T11:38:22            String       Observation end date
+0027 TIMESYS              TT                             String       Time system
+0028 MJDREF                   50814.0 [d]                Real8        MJD zero point for times
+0029 TIMEZERO                                0 [s]       Real8        Clock correction
+0030 TIMEUNIT             s                              String       Time unit
+0031 BTIMNULL             148909332.7488999963           Real8        Basic Time offset (s)
+0032 DATACLAS             OBSERVED                       String       default
+0033 RADESYS              ICRS                           String       default
+0034 BTIMRATE                 0.25625001060987           Real8        Basic Time clock rate (s / VCDUcount)
+0035 BTIMDRFT                    2.0138192E-19           Real8        Basic Time clock drift (s / VCDUcount^2)
+0036 BTIMCORR                                0           Real8        Correction applied to Basic Time rate (s)
+0037 TIMEREF              LOCAL                          String       Time reference (barycenter/local)
+0038 TASSIGN              SATELLITE                      String       Time assigned by clock
+0039 CLOCKAPP             TRUE                           Logical      default
+0040 SIM_X                   -0.68282252473119 [mm]      Real8        SIM focus pos
+0041 SIM_Y                                   0 [mm]      Real8        SIM orthogonal axis pos
+0042 SIM_Z                     -190.1400660499 [mm]      Real8        SIM translation stage pos
+0043 FOC_LEN                  10070.0 [mm]               Real8        HRMA focal length
+0044 TIERRELA                            1E-09           Real8        default
+0045 TIERABSO                            5E-05           Real8        default
+0046 TIMVERSN             ASC-FITS-2                     String       Timing system definition
+0047 TSTART               149705940.2318800092 [s]       Real8        Observation start time (MET)
+0048 GRATING              NONE                           String       Grating
+0049 DETNAM               ACIS-23678                     String       Detector
+0050 RA_PNT                       6.0752286989 [deg]     Real8        Pointing RA
+0051 DEC_PNT                    -72.0825082259 [deg]     Real8        Pointing Dec
+0052 ROLL_PNT                 0.39232389559560 [deg]     Real8        Pointing Roll
+0053 RA_TARG                      6.0241670 [deg]        Real8        Observer's specified target RA
+0054 DEC_TARG                   -72.0808890 [deg]        Real8        Observer's specified target Dec
+0055 DEFOCUS                  0.00144493656871 [mm]      Real8        SIM defocus
+0056 RA_NOM                       6.0752286989 [deg]     Real8        Nominal RA
+0057 DEC_NOM                    -72.0825082259 [deg]     Real8        Nominal Dec
+0058 ROLL_NOM                 0.39232389559560 [deg]     Real8        Nominal Roll
+0059 TSTOP                149773102.3346599936 [s]       Real8        Observation end time (MET)
+0060 STARTMJF             24275                          Int4         Major frame ctr value at start of data
+0061 STARTMNF             60                             Int4         Start minor frame ctr at start of data
+0062 STARTOBT                                0           Real8        On-Board MET close to STARTMJF and STARTMNF
+0063 STOPMJF              26330                          Int4         Major frame ctr value at stop of data
+0064 STOPMNF              64                             Int4         Stop minor frame ctr at end of data
+0065 TIMEPIXR                 0.50                       Real8        default
+0066 TIMEDEL                      3.141040 [s]           Real8        timedel Lev1
+ --  COMMENT                                     / Observation information block------------------
+0067 ACSYS1               CHIP:AXAF-ACIS-1.0             String       reference for chip coord system
+0068 ACSYS2               TDET:ACIS-2.2                  String       reference for tiled detector coord system
+0069 ACSYS3               DET:ASC-FP-1.1                 String       reference for focal plane coord system
+0070 ACSYS4               SKY:ASC-FP-1.1                 String       reference for sky coord system
+0071 GAINFILE             acisD2000-01-29gain_ctiN0007.fits String       
+0072 CTI_CORR             TRUE                           Logical      
+0073 CTI_APP              PPPPPBPBPP                     String       
+0074 CTIFILE              acisD2002-08-01ctiN0008.fits   String       
+0075 MTLFILE              acisf02735_000N003_mtl1.fits   String       
+0076 TGAINCOR             T                              String       
+0077 TGAINFIL             acisD2002-08-01t_gainN0006.fits String       
+0078 GRD_FILE             acisD1996-11-01gradeN0004.fits String       
+0079 CORNERS              2                              Int4         num adjacent side pix > threshold to include co
+0080 GRADESYS             ASCA                           String       grade system: ASCA, ACIS, or USER
+0081 BPIXFILE             acisf02735_repro_bpix1.fits    String       
+0082 MISSION              AXAF                           String       Mission
+0083 TELESCOP             CHANDRA                        String       Telescope
+0084 INSTRUME             ACIS                           String       Instrument
+ --  COMMENT              AXAF FITS File ACIS specific keywords
+0085 READMODE             TIMED                          String       Read mode
+0086 DATAMODE             FAINT                          String       Data mode
+0087 RUN_ID               1                              Int4         Science run index
+0088 FSW_VERS             30                             Int4         ACIS flight software version number
+0089 STARTBEP             180967463                      Int4         BEP timer value at TSTART
+0090 STOPBEP              2497261159                     UInt4        BEP timer value at TSTOP
+ --  COMMENT              Product specific keywords are inserted here
+0091 FEP_ID               1                              Int4         Front End Processor ID: 0-5
+0092 CCD_ID               7                              Int4         CCD ID: 0-9
+0093 TIMEDELA                     3.141040               Real8        Inferred duration of primary exposure (s)
+0094 TIMEDELB                                0           Real8        Inferred duration of secondary exp. (s)
+0095 FLSHTIME                                0 [s]       Real8        
+0096 EXPTIME                      3.10 [s]               Real8        
+0097 DTYCYCLE             0                              Int4         
+0098 FIRSTROW             1                              Int4         Index of first row of CCD (sub)array readout
+0099 NROWS                1024                           Int4         Number of rows in (sub)array readout
+0100 FLSHTIMA                                0           Real8        Inferred duration of flush before primary fram
+0101 FLSHTIMB                                0           Real8        Inferred duration of flush before secondary fr
+0102 CYCLE                P                              String       events from which exps? Prim/Second/Both
+ --  COMMENT                                     / Column format information block----------------
+ --  COMMENT                                     / History information block----------------------
+0103 HISTNUM              668                            Int4         
+ --  HISTORY               TOOL  :ade                                                     ASC00001
+ --  HISTORY               PARM  :infile=/dsops/repro4/sdp.1/opus/prs_run/tmp//TP_ADE____4ASC00002
+ --  HISTORY               CONT  :66446391n067/input/acisf149705568N003_SR0.strip         ASC00003
+ --  HISTORY               PARM  :template=/vobs/ASC_DR_TLM/src/dr/tlm/template_dir/acis_sASC00004
+ --  HISTORY               CONT  :trip_file_info.dat@@/main/2                             ASC00005
+ --  HISTORY               PARM  :template=/vobs/ASC_DR_TLM/src/dr/tlm/template_dir/acis_fASC00006
+ --  HISTORY               CONT  :ile_info.dat@@/main/12                                  ASC00007
+ --  HISTORY               PARM  :template=/vobs/ASC_DR_TLM/src/dr/tlm/template_dir/acis_cASC00008
+ --  HISTORY               CONT  :onfig_file.dat@@/main/2                                 ASC00009
+ --  HISTORY               PARM  :template=/vobs/ASC_DR_TLM/src/dr/tlm/template_dir/acis_gASC00010
+ --  HISTORY               CONT  :roup_info.dat@@/main/12                                 ASC00011
+ --  HISTORY               PARM  :template=/vobs/ASC_DR_TLM/src/dr/tlm/template_dir/acis_dASC00012
+ --  HISTORY               CONT  :p_info.dat@@/main/21                                    ASC00013
+ --  HISTORY               PARM  :template=/vobs/ASC_DR_TLM/src/dr/tlm/template_dir/acis_dASC00014
+ --  HISTORY               CONT  :eahk_dp_info.dat@@/main/1                               ASC00015
+ --  HISTORY               PARM  :template=/vobs/ASC_DR_TLM/src/dr/tlm/template_dir/acis_cASC00016
+ --  HISTORY               CONT  :ommon_dp_info.dat@@/main/9                              ASC00017
+ --  HISTORY               PARM  :template=/vobs/ASC_DR_TLM/src/dr/tlm/template_dir/acis_cASC00018
+ --  HISTORY               CONT  :al_info.dat@@/main/2                                    ASC00019
+0104 TITLE                COMPLETE COMPACT OBJECT AND BINARY SURVEY OF 47TUC String       Proposal title
+0105 OBSERVER             Professor Johnathan Grindlay   String       Principal investigator
+0106 OBJECT               47 TUCANAE                     String       Source name
+0107 OBS_ID               2735                           String       Observation id
+0108 OBI_NUM              0                              Int4         Obi number
+0109 SEQ_NUM              400215                         String       Sequence number
+ --  HISTORY               TOOL  :acis_format_events   2012-10-14T22:49:59                ASC00020
+ --  HISTORY               PARM  :infile=@/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_ASC00021
+ --  HISTORY               CONT  :466540988n048/input/acisf02735_000N003_evt0.lis         ASC00022
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00023
+ --  HISTORY               CONT  :8n048/input/acisf149706850N003_1_evt0.fits[time=14970594ASC00024
+ --  HISTORY               CONT  :0.2318800:149773102.3346600]                            ASC00025
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00026
+ --  HISTORY               CONT  :8n048/input/acisf149706850N003_2_evt0.fits[time=14970594ASC00027
+ --  HISTORY               CONT  :0.2318800:149773102.3346600]                            ASC00028
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00029
+0110 ONTIME                   66102.3932123180 [s]       Real8        Sum of GTIs
+0111 ONTIME7                  66102.3932123180 [s]       Real8        Sum of GTIs
+0112 ONTIME6                  66102.3932472770 [s]       Real8        Sum of GTIs
+0113 ONTIME3                  66105.5342174770 [s]       Real8        Sum of GTIs
+0114 ONTIME8                  66099.252336830 [s]        Real8        Sum of GTIs
+0115 ONTIME2                  66105.5342174770 [s]       Real8        Sum of GTIs
+0116 LIVETIME                 65238.7167811260 [s]       Real8        Livetime
+0117 LIVTIME7                 65238.7167811260 [s]       Real8        Livetime
+0118 LIVTIME6                 65238.7168156270 [s]       Real8        Livetime
+0119 LIVTIME3                 65241.8167467390 [s]       Real8        Livetime
+0120 LIVTIME8                 65235.6169434880 [s]       Real8        Livetime
+0121 LIVTIME2                 65241.8167467390 [s]       Real8        Livetime
+0122 EXPOSURE                 65238.7167811260 [s]       Real8        Exposure time
+0123 EXPOSUR7                 65238.7167811260 [s]       Real8        Exposure time
+0124 EXPOSUR6                 65238.7168156270 [s]       Real8        Exposure time
+0125 EXPOSUR3                 65241.8167467390 [s]       Real8        Exposure time
+0126 EXPOSUR8                 65235.6169434880 [s]       Real8        Exposure time
+0127 EXPOSUR2                 65241.8167467390 [s]       Real8        Exposure time
+0128 DTCOR                    0.98693426381071           Real8        Dead time correction
+ --  HISTORY               CONT  :8n048/input/acisf149706850N003_3_evt0.fits[time=14970594ASC00030
+ --  HISTORY               CONT  :0.2318800:149773102.3346600]                            ASC00031
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00032
+ --  HISTORY               CONT  :8n048/input/acisf149706850N003_4_evt0.fits[time=14970594ASC00033
+ --  HISTORY               CONT  :0.2318800:149773102.3346600]                            ASC00034
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00035
+ --  HISTORY               CONT  :8n048/input/acisf149706850N003_5_evt0.fits[time=14970594ASC00036
+ --  HISTORY               CONT  :0.2318800:149773102.3346600]                            ASC00037
+ --  HISTORY               PARM  :biasfile=@/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_LASC00038
+ --  HISTORY               CONT  :1_466540988n048/input/acisf02735_000N003_bias0.lis      ASC00039
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00040
+ --  HISTORY               CONT  :8n048/input/acisf149705668N003_1_bias0.fits             ASC00041
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00042
+ --  HISTORY               CONT  :8n048/input/acisf149705668N003_2_bias0.fits             ASC00043
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00044
+ --  HISTORY               CONT  :8n048/input/acisf149705668N003_3_bias0.fits             ASC00045
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00046
+ --  HISTORY               CONT  :8n048/input/acisf149705668N003_4_bias0.fits             ASC00047
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00048
+ --  HISTORY               CONT  :8n048/input/acisf149705668N003_5_bias0.fits             ASC00049
+ --  HISTORY               PARM  :exrfile=@/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1ASC00050
+ --  HISTORY               CONT  :_466540988n048/input/acisf02735_000N003_exr0.lis        ASC00051
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00052
+ --  HISTORY               CONT  :8n048/input/acisf149706850N003_1_exr0.fits[time=14970594ASC00053
+ --  HISTORY               CONT  :0.2318800:149773102.3346600]                            ASC00054
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00055
+ --  HISTORY               CONT  :8n048/input/acisf149706850N003_2_exr0.fits[time=14970594ASC00056
+ --  HISTORY               CONT  :0.2318800:149773102.3346600]                            ASC00057
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00058
+ --  HISTORY               CONT  :8n048/input/acisf149706850N003_3_exr0.fits[time=14970594ASC00059
+ --  HISTORY               CONT  :0.2318800:149773102.3346600]                            ASC00060
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00061
+ --  HISTORY               CONT  :8n048/input/acisf149706850N003_4_exr0.fits[time=14970594ASC00062
+ --  HISTORY               CONT  :0.2318800:149773102.3346600]                            ASC00063
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00064
+ --  HISTORY               CONT  :8n048/input/acisf149706850N003_5_exr0.fits[time=14970594ASC00065
+ --  HISTORY               CONT  :0.2318800:149773102.3346600]                            ASC00066
+ --  HISTORY               PARM  :outfile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_ASC00067
+ --  HISTORY               CONT  :466540988n048/output/acisf02735_000N003_epr1.fits       ASC00068
+ --  HISTORY               PARM  :outbias=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_ASC00069
+ --  HISTORY               CONT  :466540988n048/output/acisf02735_000N003                 ASC00070
+ --  HISTORY               PARM  :expstatsfile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_ASC00071
+ --  HISTORY               CONT  :F_L1_466540988n048/output/acisf02735_000N003_stat1.fits ASC00072
+ --  HISTORY               PARM  :obsfile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_ASC00073
+ --  HISTORY               CONT  :466540988n048/input/axaff02735_000N003_obs0a.par        ASC00074
+ --  HISTORY               PARM  :logfile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_ASC00075
+ --  HISTORY               CONT  :466540988n048/output/acis_format_events.log             ASC00076
+ --  HISTORY               PARM  :bias_correct=yes                                        ASC00077
+ --  HISTORY               PARM  :oc_correct=yes                                          ASC00078
+ --  HISTORY               PARM  :geompar=geom                                            ASC00079
+ --  HISTORY               PARM  :eventdef={d:time,i:expno,s:chipx,s:chipy,s:phas,s:ccd_idASC00080
+ --  HISTORY               CONT  :,s:node_id,x:status}                                    ASC00081
+0129 TIME_ADJ             NONE                           String       time adjustment algorithm
+ --  HISTORY               PARM  :telev1={d:time,i:expno,s:chipx,s:chipy,s:phas,s:ccd_id,sASC00082
+ --  HISTORY               CONT  ::node_id,x:status}                                      ASC00083
+ --  HISTORY               PARM  :vflev1={d:time,i:expno,s:chipx,s:chipy,s:phas,s:ccd_id,sASC00084
+ --  HISTORY               CONT  ::node_id,x:status}                                      ASC00085
+ --  HISTORY               PARM  :cclev1={d:time,i:expno,s:chipx,s:chipy,s:phas,s:ccd_id,sASC00086
+ --  HISTORY               CONT  ::node_id,x:status}                                      ASC00087
+ --  HISTORY               PARM  :tegrflev1={d:time,i:expno,s:chipx,s:chipy,l:pha,s:fltgraASC00088
+ --  HISTORY               CONT  :de,s:corn_pha,s:ccd_id,s:node_id,x:status}              ASC00089
+ --  HISTORY               PARM  :ccgrlev1={d:time,i:expno,s:chipx,s:chipy,l:pha,s:fltgradASC00090
+ --  HISTORY               CONT  :e,s:corn_pha,s:ccd_id,s:node_id,x:status}               ASC00091
+ --  HISTORY               PARM  :verbose=0                                               ASC00092
+ --  HISTORY               PARM  :tempbias=no                                             ASC00093
+ --  HISTORY               PARM  :clobber=no                                              ASC00094
+ --  HISTORY               PARM  :PIXLIB Version: 4.0.0                                   ASC00095
+ --  HISTORY               PARM  :******     PIXLIB Parameter File      *****             ASC00096
+ --  HISTORY               PARM  :/dsops/repro4/sdp.1/opus/prs_run/tmp/ACIS_F_L1_466540988ASC00097
+ --  HISTORY               CONT  :n048/output/param/geom.par:                             ASC00098
+ --  HISTORY               PARM  :instruments  = /data/CALDB/sdp/data/chandra/default/geomASC00099
+ --  HISTORY               CONT  :/telD1999-07-23geomN0006.fits(CALDB)                    ASC00100
+ --  HISTORY               PARM  :aimpoints    = /data/CALDB/sdp/data/chandra/default/aimpASC00101
+ --  HISTORY               CONT  :ts/telD1999-07-23aimptsN0002.fits(CALDB)                ASC00102
+ --  HISTORY               PARM  :tdet         = /data/CALDB/sdp/data/chandra/default/tdetASC00103
+ --  HISTORY               CONT  :/telD1999-07-23tdetN0001.fits(CALDB)                    ASC00104
+ --  HISTORY               PARM  :sky          = /data/CALDB/sdp/data/chandra/default/sky/ASC00105
+ --  HISTORY               CONT  :telD1999-07-23skyN0002.fits(CALDB)                      ASC00106
+ --  HISTORY               PARM  :shell        = /data/CALDB/sdp/data/chandra/default/sgeoASC00107
+ --  HISTORY               CONT  :m/telD1999-07-23sgeomN0001.fits(CALDB)                  ASC00108
+ --  HISTORY               PARM  :obsfile      = 2002-09-29T16:59:00(/dsops/repro4/sdp.1/oASC00109
+0130 ASPTYPE              KALMAN                         String       
+ --  HISTORY               CONT  :pus/prs_run/tmp//ACIS_F_L1_466540988n048/input/axaff0273ASC00110
+ --  HISTORY               CONT  :5_000N003_obs0a.par)                                    ASC00111
+ --  HISTORY               PARM  :******     PIXLIB System Configuration      ******      ASC00112
+ --  HISTORY               PARM  :Telescope = axaf                                        ASC00113
+ --  HISTORY               PARM  :Focal Length (mm) = 10070.000                           ASC00114
+ --  HISTORY               PARM  :Detector = ACIS                                         ASC00115
+ --  HISTORY               PARM  :Focal Plane Sys. = FP-1.1                               ASC00116
+ --  HISTORY               PARM  :Tiled Detector Plane Sys. = ACIS-2.2                    ASC00117
+ --  HISTORY               PARM  :SIM Offset (mm) = (0.684 0.75 236.552)                  ASC00118
+ --  HISTORY               PARM  :Aim Point(AI1) (mm) = (-0.782348 0 -237.5)              ASC00119
+ --  HISTORY               PARM  :Grating Arm = HEG                                       ASC00120
+ --  HISTORY               PARM  :Grating Order =  1                                      ASC00121
+ --  HISTORY               PARM  :Dispersion Plane Sys. = ASC-GDP-1.1                     ASC00122
+ --  HISTORY               PARM  :Rowland Circle (mm) = 8632.48                           ASC00123
+0131 BIASFIL7             acisf149705668N003_1_bias0.fits String       bias file used: CCD 7
+0132 BIASFIL6             acisf149705668N003_2_bias0.fits String       bias file used: CCD 6
+0133 BIASFIL3             acisf149705668N003_3_bias0.fits String       bias file used: CCD 3
+0134 FP_TEMP                    153.44601440 [K]         Real8        Focal Plane Temperature
+0135 BIASFIL8             acisf149705668N003_4_bias0.fits String       bias file used: CCD 8
+0136 BIASFIL2             acisf149705668N003_5_bias0.fits String       bias file used: CCD 2
+0137 AIMPFILE             telD1999-07-23aimptsN0002.fits String       
+0138 GEOMFILE             telD1999-07-23geomN0006.fits   String       
+0139 SKYFILE              telD1999-07-23skyN0002.fits    String       
+0140 TDETFILE             telD1999-07-23tdetN0001.fits   String       
+0141 SHELLFIL             telD1999-07-23sgeomN0001.fits  String       
+0142 FLTFILE              acisf02735_000N003_flt1.fits   String       
+0143 MASKFILE             acisf02735_000N003_msk1.fits   String       
+0144 PBKFILE              acisf149706850N003_pbk0.fits   String       
+0145 DY_AVG                   0.137062887410 [mm]        Real8        Mean DY during observation
+0146 DZ_AVG                   0.366111060740 [mm]        Real8        Mean DZ during observation
+0147 DTH_AVG                 -0.00391978920030 [deg]     Real8        Mean DTHETA during observation
+0148 OCLKPAIR             8                              Int4         # of pairs of overclock pixels per output
+0149 ORC_MODE             0                              Int4         Output register clocking mode
+0150 SUM_2X2              0                              Int4         On-chip summing. 0:None; 1:Sum 2x2
+0151 FEP_CCD              x76382                         String       CCD to FEPID mapping, fep0 is left most digit
+0152 CALDBVER             4.5.2                          String       
+ --  HISTORY               TOOL  :acis_sort_time   2012-10-14T22:54:08                    ASC00124
+ --  HISTORY               PARM  :infile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_4ASC00125
+ --  HISTORY               CONT  :66540988n048/output/acisf02735_000N003_epr1.fits        ASC00126
+ --  HISTORY               PARM  :outfile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_ASC00127
+ --  HISTORY               CONT  :466540988n048/output/acisf02735_000N003_tim1.fits       ASC00128
+ --  HISTORY               PARM  :clobber=no                                              ASC00129
+ --  HISTORY               PARM  :verbose=0                                               ASC00130
+ --  HISTORY               TOOL  :destreak   2012-10-14T23:02:25                          ASC00131
+ --  HISTORY               PARM  :infile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_4ASC00132
+ --  HISTORY               CONT  :66540988n048/output/acisf02735_000N003_tim1.fits        ASC00133
+ --  HISTORY               PARM  :outfile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_ASC00134
+ --  HISTORY               CONT  :466540988n048/output/acisf02735_000N003_tmp_evt1.fits   ASC00135
+ --  HISTORY               PARM  :max=                                                    ASC00136
+ --  HISTORY               PARM  :max_rowloss_fraction=5e-05                              ASC00137
+ --  HISTORY               PARM  :num_sigma=1                                             ASC00138
+ --  HISTORY               PARM  :filter=no                                               ASC00139
+ --  HISTORY               PARM  :mask=                                                   ASC00140
+ --  HISTORY               PARM  :ccd_id=8                                                ASC00141
+ --  HISTORY               PARM  :ccd_col=ccd_id                                          ASC00142
+ --  HISTORY               PARM  :node_col=node_id                                        ASC00143
+ --  HISTORY               PARM  :exptime=-1                                              ASC00144
+ --  HISTORY               PARM  :countfile=                                              ASC00145
+ --  HISTORY               PARM  :fracfile=                                               ASC00146
+ --  HISTORY               PARM  :timefile=                                               ASC00147
+ --  HISTORY               PARM  :verbose=0                                               ASC00148
+ --  HISTORY               PARM  :clobber=no                                              ASC00149
+ --  HISTORY               TOOL  :dmhedit   2012-10-14T23:05:20                           ASC00150
+ --  HISTORY               PARM  :infile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_4ASC00151
+ --  HISTORY               CONT  :66540988n048/output/acisf02735_000N003_tmp_evt1.fits    ASC00152
+ --  HISTORY               PARM  :filelist=                                               ASC00153
+ --  HISTORY               PARM  :operation=add                                           ASC00154
+ --  HISTORY               PARM  :key=CONTENT                                             ASC00155
+ --  HISTORY               PARM  :value=EVT1                                              ASC00156
+ --  HISTORY               PARM  :datatype=string                                         ASC00157
+ --  HISTORY               PARM  :unit=                                                   ASC00158
+ --  HISTORY               PARM  :comment=                                                ASC00159
+ --  HISTORY               PARM  :verbose=0                                               ASC00160
+ --  HISTORY               TOOL  :dmhedit   2012-10-14T23:15:04                           ASC00161
+ --  HISTORY               PARM  :infile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_4ASC00162
+ --  HISTORY               CONT  :66540988n048/output/acisf02735_000N003_tmp_evt1.fits    ASC00163
+ --  HISTORY               PARM  :filelist=                                               ASC00164
+ --  HISTORY               PARM  :operation=add                                           ASC00165
+ --  HISTORY               PARM  :key=FP_TEMP                                             ASC00166
+ --  HISTORY               PARM  :value=153.4460144                                       ASC00167
+ --  HISTORY               PARM  :datatype=double                                         ASC00168
+ --  HISTORY               PARM  :unit=K                                                  ASC00169
+ --  HISTORY               PARM  :comment=Focal Plane Temperature                         ASC00170
+ --  HISTORY               PARM  :verbose=0                                               ASC00171
+ --  HISTORY               TOOL  :acis_process_events   2012-10-14T23:16:56               ASC00172
+ --  HISTORY               PARM  :infile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_4ASC00173
+ --  HISTORY               CONT  :66540988n048/output/acisf02735_000N003_tmp_evt1.fits    ASC00174
+ --  HISTORY               PARM  :outfile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_ASC00175
+ --  HISTORY               CONT  :466540988n048/output/acisf02735_000N003_evt1.fits       ASC00176
+ --  HISTORY               PARM  :acaofffile=@/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_FASC00177
+ --  HISTORY               CONT  :_L1_466540988n048/input/pcadf02735_000N003_asol1.lis    ASC00178
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00179
+ --  HISTORY               CONT  :8n048/input/pcadf149706672N003_asol1.fits[time=149705940ASC00180
+ --  HISTORY               CONT  :.2318800:149773102.3346600]                             ASC00181
+ --  HISTORY               PARM  :apply_cti=yes                                           ASC00182
+ --  HISTORY               PARM  :apply_tgain=yes                                         ASC00183
+ --  HISTORY               PARM  :alignmentfile=@/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIASC00184
+ --  HISTORY               CONT  :S_F_L1_466540988n048/input/pcadf02735_000N003_asol1.lis ASC00185
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00186
+ --  HISTORY               CONT  :8n048/input/pcadf149706672N003_asol1.fits[time=149705940ASC00187
+ --  HISTORY               CONT  :.2318800:149773102.3346600]                             ASC00188
+ --  HISTORY               PARM  :obsfile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_ASC00189
+ --  HISTORY               CONT  :466540988n048/output/axaff02735_000N003_obs0a.par       ASC00190
+ --  HISTORY               PARM  :geompar=geom                                            ASC00191
+ --  HISTORY               PARM  :logfile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_ASC00192
+ --  HISTORY               CONT  :466540988n048/output/acis_process_events.log            ASC00193
+ --  HISTORY               PARM  :gradefile=CALDB                                         ASC00194
+ --  HISTORY               PARM  :grade_image_file=CALDB                                  ASC00195
+ --  HISTORY               PARM  :gainfile=CALDB                                          ASC00196
+ --  HISTORY               PARM  :badpixfile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_ASC00197
+ --  HISTORY               CONT  :L1_466540988n048/output/acisf02735_000N003_bpix1.fits   ASC00198
+ --  HISTORY               PARM  :threshfile=CALDB                                        ASC00199
+ --  HISTORY               PARM  :ctifile=CALDB                                           ASC00200
+ --  HISTORY               PARM  :tgainfile=CALDB                                         ASC00201
+ --  HISTORY               PARM  :mtlfile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_ASC00202
+ --  HISTORY               CONT  :466540988n048/output/acisf02735_000N003_fptemp_egti1.fitASC00203
+ --  HISTORY               CONT  :s                                                       ASC00204
+ --  HISTORY               PARM  :eventdef={d:time,s:ccd_id,s:node_id,i:expno,s:chip,s:tdeASC00205
+ --  HISTORY               CONT  :t,f:det,f:sky,s:phas,l:pha,l:pha_ro,f:energy,l:pi,s:fltgASC00206
+ --  HISTORY               CONT  :rade,s:grade,x:status}                                  ASC00207
+ --  HISTORY               PARM  :doevtgrade=yes                                          ASC00208
+ --  HISTORY               PARM  :check_vf_pha=no                                         ASC00209
+ --  HISTORY               PARM  :calc_cc_times=yes                                       ASC00210
+ --  HISTORY               PARM  :trail=0.027                                             ASC00211
+ --  HISTORY               PARM  :spthresh=13                                             ASC00212
+ --  HISTORY               PARM  :time_offset=0                                           ASC00213
+ --  HISTORY               PARM  :calculate_pi=yes                                        ASC00214
+ --  HISTORY               PARM  :pi_bin_width=14.6                                       ASC00215
+ --  HISTORY               PARM  :pi_num_bins=1024                                        ASC00216
+ --  HISTORY               PARM  :max_cti_iter=15                                         ASC00217
+ --  HISTORY               PARM  :cti_converge=0.1                                        ASC00218
+ --  HISTORY               PARM  :tstart=TSTART                                           ASC00219
+ --  HISTORY               PARM  :tstop=TSTOP                                             ASC00220
+ --  HISTORY               PARM  :clobber=no                                              ASC00221
+ --  HISTORY               PARM  :verbose=0                                               ASC00222
+ --  HISTORY               PARM  :stop=sky                                                ASC00223
+ --  HISTORY               PARM  :instrume=acis                                           ASC00224
+ --  HISTORY               PARM  :rand_seed=1                                             ASC00225
+ --  HISTORY               PARM  :rand_pha=yes                                            ASC00226
+ --  HISTORY               PARM  :pix_adj=EDSER                                           ASC00227
+ --  HISTORY               PARM  :subpixfile=CALDB                                        ASC00228
+ --  HISTORY               PARM  :stdlev1={d:time,s:ccd_id,s:node_id,i:expno,s:chip,s:tdetASC00229
+ --  HISTORY               CONT  :,f:det,f:sky,s:phas,l:pha,l:pha_ro,f:energy,l:pi,s:fltgrASC00230
+ --  HISTORY               CONT  :ade,s:grade,x:status}                                   ASC00231
+ --  HISTORY               PARM  :grdlev1={d:time,s:ccd_id,s:node_id,i:expno,s:chip,s:tdetASC00232
+ --  HISTORY               CONT  :,f:det,f:sky,l:pha,l:pha_ro,s:corn_pha,f:energy,l:pi,s:fASC00233
+ --  HISTORY               CONT  :ltgrade,s:grade,x:status}                               ASC00234
+ --  HISTORY               PARM  :cclev1={d:time,d:time_ro,s:ccd_id,s:node_id,i:expno,s:chASC00235
+ --  HISTORY               CONT  :ip,s:tdet,f:det,f:sky,f:sky_1d,s:phas,l:pha,l:pha_ro,f:eASC00236
+ --  HISTORY               CONT  :nergy,l:pi,s:fltgrade,s:grade,x:status}                 ASC00237
+ --  HISTORY               PARM  :ccgrdlev1={d:time,d:time_ro,s:ccd_id,s:node_id,i:expno,sASC00238
+ --  HISTORY               CONT  ::chip,s:tdet,f:det,f:sky,f:sky_1d,l:pha,l:pha_ro,s:corn_ASC00239
+ --  HISTORY               CONT  :pha,f:energy,l:pi,s:fltgrade,s:grade,x:status}          ASC00240
+ --  HISTORY               PARM  :PIXLIB Version: 4.0.0                                   ASC00241
+ --  HISTORY               PARM  :******     PIXLIB Parameter File      *****             ASC00242
+ --  HISTORY               PARM  :/dsops/repro4/sdp.1/opus/prs_run/tmp/ACIS_F_L1_466540988ASC00243
+ --  HISTORY               CONT  :n048/output/param/geom.par:                             ASC00244
+ --  HISTORY               PARM  :instruments  = /data/CALDB/sdp/data/chandra/default/geomASC00245
+ --  HISTORY               CONT  :/telD1999-07-23geomN0006.fits(CALDB)                    ASC00246
+ --  HISTORY               PARM  :aimpoints    = /data/CALDB/sdp/data/chandra/default/aimpASC00247
+ --  HISTORY               CONT  :ts/telD1999-07-23aimptsN0002.fits(CALDB)                ASC00248
+ --  HISTORY               PARM  :tdet         = /data/CALDB/sdp/data/chandra/default/tdetASC00249
+ --  HISTORY               CONT  :/telD1999-07-23tdetN0001.fits(CALDB)                    ASC00250
+ --  HISTORY               PARM  :sky          = /data/CALDB/sdp/data/chandra/default/sky/ASC00251
+ --  HISTORY               CONT  :telD1999-07-23skyN0002.fits(CALDB)                      ASC00252
+ --  HISTORY               PARM  :shell        = /data/CALDB/sdp/data/chandra/default/sgeoASC00253
+ --  HISTORY               CONT  :m/telD1999-07-23sgeomN0001.fits(CALDB)                  ASC00254
+ --  HISTORY               PARM  :obsfile      = 2002-09-29T16:59:00(/dsops/repro4/sdp.1/oASC00255
+ --  HISTORY               CONT  :pus/prs_run/tmp//ACIS_F_L1_466540988n048/input/axaff0273ASC00256
+ --  HISTORY               CONT  :5_000N003_obs0a.par)                                    ASC00257
+ --  HISTORY               PARM  :******     PIXLIB System Configuration      ******      ASC00258
+ --  HISTORY               PARM  :Telescope = FLIGHT                                      ASC00259
+ --  HISTORY               PARM  :Focal Length (mm) = 10070.000                           ASC00260
+ --  HISTORY               PARM  :Detector = ACIS                                         ASC00261
+ --  HISTORY               PARM  :Focal Plane Sys. = FP-1.1                               ASC00262
+ --  HISTORY               PARM  :Tiled Detector Plane Sys. = ACIS-2.2                    ASC00263
+ --  HISTORY               PARM  :SIM Offset (mm) = (0.684 0.75 236.552)                  ASC00264
+ --  HISTORY               PARM  :Aim Point(NONE) (mm) = (-0.682823 0 -190.14)            ASC00265
+ --  HISTORY               PARM  :Grating Arm = HEG                                       ASC00266
+ --  HISTORY               PARM  :Grating Order =  1                                      ASC00267
+ --  HISTORY               PARM  :Dispersion Plane Sys. = ASC-GDP-1.1                     ASC00268
+ --  HISTORY               PARM  :Rowland Circle (mm) = 8632.48                           ASC00269
+ --  HISTORY               PARM  :Stage Ang (arc-mins) = (0 0 0)                          ASC00270
+ --  HISTORY               PARM  :Stage Pos (mm) = (0 0 0)                                ASC00271
+ --  HISTORY               PARM  :Pitch-Yaw (arc-mins) = (0 0           )                 ASC00272
+ --  HISTORY               TOOL  :acis_build_chip_gti   2012-10-15T00:10:37               ASC00273
+ --  HISTORY               PARM  :infile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_4ASC00274
+ --  HISTORY               CONT  :66540988n048/output/acisf02735_000N003_stat1.fits       ASC00275
+ --  HISTORY               PARM  :outfile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_ASC00276
+ --  HISTORY               CONT  :466540988n048/output/acisf02735_000N003_evt1.fits       ASC00277
+ --  HISTORY               PARM  :pbkfile=@/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1ASC00278
+ --  HISTORY               CONT  :_466540988n048/input/acisf02735_000N003_pbk0.lis        ASC00279
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00280
+ --  HISTORY               CONT  :8n048/input/acisf149706850N003_pbk0.fits[time=149705940.ASC00281
+ --  HISTORY               CONT  :2318800:149773102.3346600]                              ASC00282
+ --  HISTORY               PARM  :exrfile=@/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1ASC00283
+ --  HISTORY               CONT  :_466540988n048/input/acisf02735_000N003_exr0.lis        ASC00284
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00285
+ --  HISTORY               CONT  :8n048/input/acisf149706850N003_1_exr0.fits[time=14970594ASC00286
+ --  HISTORY               CONT  :0.2318800:149773102.3346600]                            ASC00287
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00288
+ --  HISTORY               CONT  :8n048/input/acisf149706850N003_2_exr0.fits[time=14970594ASC00289
+ --  HISTORY               CONT  :0.2318800:149773102.3346600]                            ASC00290
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00291
+ --  HISTORY               CONT  :8n048/input/acisf149706850N003_3_exr0.fits[time=14970594ASC00292
+ --  HISTORY               CONT  :0.2318800:149773102.3346600]                            ASC00293
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00294
+ --  HISTORY               CONT  :8n048/input/acisf149706850N003_4_exr0.fits[time=14970594ASC00295
+ --  HISTORY               CONT  :0.2318800:149773102.3346600]                            ASC00296
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00297
+ --  HISTORY               CONT  :8n048/input/acisf149706850N003_5_exr0.fits[time=14970594ASC00298
+ --  HISTORY               CONT  :0.2318800:149773102.3346600]                            ASC00299
+ --  HISTORY               PARM  :aspfile=@/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1ASC00300
+ --  HISTORY               CONT  :_466540988n048/input/pcadf02735_000N003_asol1.lis       ASC00301
+ --  HISTORY               STCK  :/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_46654098ASC00302
+ --  HISTORY               CONT  :8n048/input/pcadf149706672N003_asol1.fits[time=149705940ASC00303
+ --  HISTORY               CONT  :.2318800:149773102.3346600]                             ASC00304
+ --  HISTORY               PARM  :geompar=geom                                            ASC00305
+ --  HISTORY               PARM  :nominalchip=7                                           ASC00306
+ --  HISTORY               PARM  :verbose=0                                               ASC00307
+ --  HISTORY               TOOL  :dmhedit   2012-10-15T00:43:11                           ASC00308
+ --  HISTORY               PARM  :infile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_4ASC00309
+ --  HISTORY               CONT  :66540988n048/output/acisf02735_000N003_evt1.fits[EVENTS]ASC00310
+ --  HISTORY               CONT  :,/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_4665409ASC00311
+ --  HISTORY               CONT  :88n048/output/acisf02735_000N003_aoff1.fits[ASPOFF],/dsoASC00312
+ --  HISTORY               CONT  :ps/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_466540988n04ASC00313
+ --  HISTORY               CONT  :8/output/acisf02735_000N003_soff1.fits[ALIGN],/dsops/repASC00314
+ --  HISTORY               CONT  :ro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_466540988n048/outpASC00315
+ --  HISTORY               CONT  :ut/acisf02735_000N003_std_flt1.fits[FILTER],/dsops/reproASC00316
+ --  HISTORY               CONT  :4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_466540988n048/outputASC00317
+ --  HISTORY               CONT  :/acisf02735_000N003_flt1.fits[FILTER],/dsops/repro4/sdp.ASC00318
+ --  HISTORY               CONT  :1/opus/prs_run/tmp//ACIS_F_L1_466540988n048/output/acisfASC00319
+ --  HISTORY               CONT  :02735_000N003_bpix1.fits[2],/dsops/repro4/sdp.1/opus/prsASC00320
+ --  HISTORY               CONT  :_run/tmp//ACIS_F_L1_466540988n048/output/acisf02735_000NASC00321
+ --  HISTORY               CONT  :003_msk1.fits[2]                                        ASC00322
+ --  HISTORY               PARM  :filelist=                                               ASC00323
+ --  HISTORY               PARM  :operation=add                                           ASC00324
+ --  HISTORY               PARM  :key=REVISION                                            ASC00325
+ --  HISTORY               PARM  :value=3                                                 ASC00326
+ --  HISTORY               PARM  :datatype=long                                           ASC00327
+ --  HISTORY               PARM  :unit=                                                   ASC00328
+ --  HISTORY               PARM  :comment=                                                ASC00329
+ --  HISTORY               PARM  :verbose=0                                               ASC00330
+ --  HISTORY               TOOL  :dmhedit   2012-10-15T00:45:45                           ASC00331
+ --  HISTORY               PARM  :infile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_4ASC00332
+ --  HISTORY               CONT  :66540988n048/output/acisf02735_000N003_evt1.fits[EVENTS]ASC00333
+ --  HISTORY               PARM  :filelist=                                               ASC00334
+ --  HISTORY               PARM  :operation=add                                           ASC00335
+ --  HISTORY               PARM  :key=AIMPFILE                                            ASC00336
+ --  HISTORY               PARM  :value=telD1999-07-23aimptsN0002.fits                    ASC00337
+ --  HISTORY               PARM  :datatype=string                                         ASC00338
+ --  HISTORY               PARM  :unit=                                                   ASC00339
+ --  HISTORY               PARM  :comment=                                                ASC00340
+ --  HISTORY               PARM  :verbose=0                                               ASC00341
+ --  HISTORY               TOOL  :dmhedit   2012-10-15T00:45:58                           ASC00342
+ --  HISTORY               PARM  :infile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_4ASC00343
+ --  HISTORY               CONT  :66540988n048/output/acisf02735_000N003_evt1.fits[EVENTS]ASC00344
+ --  HISTORY               PARM  :filelist=                                               ASC00345
+ --  HISTORY               PARM  :operation=add                                           ASC00346
+ --  HISTORY               PARM  :key=GEOMFILE                                            ASC00347
+ --  HISTORY               PARM  :value=telD1999-07-23geomN0006.fits                      ASC00348
+ --  HISTORY               PARM  :datatype=string                                         ASC00349
+ --  HISTORY               PARM  :unit=                                                   ASC00350
+ --  HISTORY               PARM  :comment=                                                ASC00351
+ --  HISTORY               PARM  :verbose=0                                               ASC00352
+ --  HISTORY               TOOL  :dmhedit   2012-10-15T00:46:20                           ASC00353
+ --  HISTORY               PARM  :infile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_4ASC00354
+ --  HISTORY               CONT  :66540988n048/output/acisf02735_000N003_evt1.fits[EVENTS]ASC00355
+ --  HISTORY               PARM  :filelist=                                               ASC00356
+ --  HISTORY               PARM  :operation=add                                           ASC00357
+ --  HISTORY               PARM  :key=SKYFILE                                             ASC00358
+ --  HISTORY               PARM  :value=telD1999-07-23skyN0002.fits                       ASC00359
+ --  HISTORY               PARM  :datatype=string                                         ASC00360
+ --  HISTORY               PARM  :unit=                                                   ASC00361
+ --  HISTORY               PARM  :comment=                                                ASC00362
+ --  HISTORY               PARM  :verbose=0                                               ASC00363
+ --  HISTORY               TOOL  :dmhedit   2012-10-15T00:46:33                           ASC00364
+ --  HISTORY               PARM  :infile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_4ASC00365
+ --  HISTORY               CONT  :66540988n048/output/acisf02735_000N003_evt1.fits[EVENTS]ASC00366
+ --  HISTORY               PARM  :filelist=                                               ASC00367
+ --  HISTORY               PARM  :operation=add                                           ASC00368
+ --  HISTORY               PARM  :key=TDETFILE                                            ASC00369
+ --  HISTORY               PARM  :value=telD1999-07-23tdetN0001.fits                      ASC00370
+ --  HISTORY               PARM  :datatype=string                                         ASC00371
+ --  HISTORY               PARM  :unit=                                                   ASC00372
+ --  HISTORY               PARM  :comment=                                                ASC00373
+ --  HISTORY               PARM  :verbose=0                                               ASC00374
+ --  HISTORY               TOOL  :dmhedit   2012-10-15T00:46:46                           ASC00375
+ --  HISTORY               PARM  :infile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_4ASC00376
+ --  HISTORY               CONT  :66540988n048/output/acisf02735_000N003_evt1.fits[EVENTS]ASC00377
+ --  HISTORY               PARM  :filelist=                                               ASC00378
+ --  HISTORY               PARM  :operation=add                                           ASC00379
+ --  HISTORY               PARM  :key=SHELLFIL                                            ASC00380
+ --  HISTORY               PARM  :value=telD1999-07-23sgeomN0001.fits                     ASC00381
+ --  HISTORY               PARM  :datatype=string                                         ASC00382
+ --  HISTORY               PARM  :unit=                                                   ASC00383
+ --  HISTORY               PARM  :comment=                                                ASC00384
+ --  HISTORY               PARM  :verbose=0                                               ASC00385
+ --  HISTORY               TOOL  :dmhedit   2012-10-15T00:47:09                           ASC00386
+ --  HISTORY               PARM  :infile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_4ASC00387
+ --  HISTORY               CONT  :66540988n048/output/acisf02735_000N003_evt1.fits[EVENTS]ASC00388
+ --  HISTORY               CONT  :[EVENTS]                                                ASC00389
+ --  HISTORY               PARM  :filelist=                                               ASC00390
+ --  HISTORY               PARM  :operation=add                                           ASC00391
+ --  HISTORY               PARM  :key=FLTFILE                                             ASC00392
+ --  HISTORY               PARM  :value=acisf02735_000N003_flt1.fits                      ASC00393
+ --  HISTORY               PARM  :datatype=string                                         ASC00394
+ --  HISTORY               PARM  :unit=                                                   ASC00395
+ --  HISTORY               PARM  :comment=                                                ASC00396
+ --  HISTORY               PARM  :verbose=0                                               ASC00397
+ --  HISTORY               TOOL  :dmhedit   2012-10-15T00:47:20                           ASC00398
+ --  HISTORY               PARM  :infile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_4ASC00399
+ --  HISTORY               CONT  :66540988n048/output/acisf02735_000N003_evt1.fits[EVENTS]ASC00400
+ --  HISTORY               CONT  :[EVENTS]                                                ASC00401
+ --  HISTORY               PARM  :filelist=                                               ASC00402
+ --  HISTORY               PARM  :operation=add                                           ASC00403
+ --  HISTORY               PARM  :key=MASKFILE                                            ASC00404
+ --  HISTORY               PARM  :value=acisf02735_000N003_msk1.fits                      ASC00405
+ --  HISTORY               PARM  :datatype=string                                         ASC00406
+ --  HISTORY               PARM  :unit=                                                   ASC00407
+ --  HISTORY               PARM  :comment=                                                ASC00408
+ --  HISTORY               PARM  :verbose=0                                               ASC00409
+ --  HISTORY               TOOL  :dmhedit   2012-10-15T00:47:31                           ASC00410
+ --  HISTORY               PARM  :infile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_4ASC00411
+ --  HISTORY               CONT  :66540988n048/output/acisf02735_000N003_evt1.fits[EVENTS]ASC00412
+ --  HISTORY               CONT  :[EVENTS]                                                ASC00413
+ --  HISTORY               PARM  :filelist=                                               ASC00414
+ --  HISTORY               PARM  :operation=add                                           ASC00415
+ --  HISTORY               PARM  :key=PBKFILE                                             ASC00416
+ --  HISTORY               PARM  :value=acisf149706850N003_pbk0.fits                      ASC00417
+ --  HISTORY               PARM  :datatype=string                                         ASC00418
+ --  HISTORY               PARM  :unit=                                                   ASC00419
+ --  HISTORY               PARM  :comment=                                                ASC00420
+ --  HISTORY               PARM  :verbose=0                                               ASC00421
+ --  HISTORY               TOOL  :dmhedit   2012-10-15T00:48:22                           ASC00422
+ --  HISTORY               PARM  :infile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_4ASC00423
+ --  HISTORY               CONT  :66540988n048/output/acisf02735_000N003_evt1.fits[EVENTS]ASC00424
+ --  HISTORY               CONT  :[events]                                                ASC00425
+ --  HISTORY               PARM  :filelist=.//13118.hdr                                   ASC00426
+ --  HISTORY               PARM  :operation=add                                           ASC00427
+ --  HISTORY               PARM  :key=BPIXFILE                                            ASC00428
+ --  HISTORY               PARM  :value=acisD2000-11-28badpixN0003.fits                   ASC00429
+ --  HISTORY               PARM  :datatype=indef                                          ASC00430
+ --  HISTORY               PARM  :unit=                                                   ASC00431
+ --  HISTORY               PARM  :comment=                                                ASC00432
+ --  HISTORY               PARM  :verbose=0                                               ASC00433
+ --  HISTORY               TOOL  :dmhedit   2012-10-15T00:48:37                           ASC00434
+ --  HISTORY               PARM  :infile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_4ASC00435
+ --  HISTORY               CONT  :66540988n048/output/acisf02735_000N003_evt1.fits[EVENTS]ASC00436
+ --  HISTORY               CONT  :[events]                                                ASC00437
+ --  HISTORY               PARM  :filelist=.//14623.hdr                                   ASC00438
+ --  HISTORY               PARM  :operation=add                                           ASC00439
+ --  HISTORY               PARM  :key=BPIXFILE                                            ASC00440
+ --  HISTORY               PARM  :value=acisD2000-11-28badpixN0003.fits                   ASC00441
+ --  HISTORY               PARM  :datatype=indef                                          ASC00442
+ --  HISTORY               PARM  :unit=                                                   ASC00443
+ --  HISTORY               PARM  :comment=                                                ASC00444
+ --  HISTORY               PARM  :verbose=0                                               ASC00445
+ --  HISTORY               TOOL  :dmhedit   2012-10-15T00:48:59                           ASC00446
+ --  HISTORY               PARM  :infile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_4ASC00447
+ --  HISTORY               CONT  :66540988n048/output/acisf02735_000N003_evt1.fits[EVENTS]ASC00448
+ --  HISTORY               CONT  :[events]                                                ASC00449
+ --  HISTORY               PARM  :filelist=                                               ASC00450
+ --  HISTORY               PARM  :operation=add                                           ASC00451
+ --  HISTORY               PARM  :key=FEP_CCD                                             ASC00452
+ --  HISTORY               PARM  :value=x76382                                            ASC00453
+ --  HISTORY               PARM  :datatype=string                                         ASC00454
+ --  HISTORY               PARM  :unit=                                                   ASC00455
+ --  HISTORY               PARM  :comment=CCD to FEPID mapping, fep0 is left most digit   ASC00456
+ --  HISTORY               PARM  :verbose=0                                               ASC00457
+ --  HISTORY               TOOL  :dmhedit   2012-10-15T00:49:12                           ASC00458
+ --  HISTORY               PARM  :infile=/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_4ASC00459
+ --  HISTORY               CONT  :66540988n048/output/acisf02735_000N003_evt1.fits,/dsops/ASC00460
+ --  HISTORY               CONT  :repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1_466540988n048/oASC00461
+ --  HISTORY               CONT  :utput/acisf02735_000N003_bpix1.fits,/dsops/repro4/sdp.1/ASC00462
+ --  HISTORY               CONT  :opus/prs_run/tmp//ACIS_F_L1_466540988n048/output/acisf02ASC00463
+ --  HISTORY               CONT  :735_000N003_mtl1.fits,/dsops/repro4/sdp.1/opus/prs_run/tASC00464
+ --  HISTORY               CONT  :mp//ACIS_F_L1_466540988n048/output/acisf02735_000N003_mtASC00465
+ --  HISTORY               CONT  :l1.fits[MTL_S],/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIASC00466
+ --  HISTORY               CONT  :S_F_L1_466540988n048/output/acisf02735_000N003_mtl1.fitsASC00467
+ --  HISTORY               CONT  :[LIMITS],/dsops/repro4/sdp.1/opus/prs_run/tmp//ACIS_F_L1ASC00468
+ --  HISTORY               CONT  :_466540988n048/output/acisf02735_000N003_fov1.fits[FOV] ASC00469
+ --  HISTORY               PARM  :filelist=                                               ASC00470
+ --  HISTORY               PARM  :operation=add                                           ASC00471
+ --  HISTORY               PARM  :key=CALDBVER                                            ASC00472
+ --  HISTORY               PARM  :value=' 4.5.2    '                                      ASC00473
+ --  HISTORY               PARM  :datatype=string                                         ASC00474
+ --  HISTORY               PARM  :unit=                                                   ASC00475
+ --  HISTORY               PARM  :comment=                                                ASC00476
+ --  HISTORY               PARM  :verbose=0                                               ASC00477
+0153 CLSTBITS             11111111011000000011111111000001 String       0 means clear STATUS bit
+ --  HISTORY              TOOL: chandra_repro at 2017-12-25T12:06:23
+ --  HISTORY                infile=/Users/pavanrh/UofA_projects/47TucW/2002_data/2735/repro/acisf0
+ --  HISTORY              2735_reset_evt1.fits
+ --  HISTORY               TOOL  :destreak   2017-12-25T19:06:39                          ASC00478
+ --  HISTORY               PARM  :infile=/Users/pavanrh/UofA_projects/47TucW/2002_data/273ASC00479
+ --  HISTORY               CONT  :5/repro/acisf02735_dsk_evt1.fits                        ASC00480
+ --  HISTORY               PARM  :outfile=/Users/pavanrh/UofA_projects/47TucW/2002_data/27ASC00481
+ --  HISTORY               CONT  :35/repro/acisf02735_reset_evt1.fits                     ASC00482
+ --  HISTORY               PARM  :max=                                                    ASC00483
+ --  HISTORY               PARM  :max_rowloss_fraction=5e-05                              ASC00484
+ --  HISTORY               PARM  :num_sigma=1                                             ASC00485
+ --  HISTORY               PARM  :filter=no                                               ASC00486
+ --  HISTORY               PARM  :mask=None                                               ASC00487
+ --  HISTORY               PARM  :ccd_id=8                                                ASC00488
+ --  HISTORY               PARM  :ccd_col=ccd_id                                          ASC00489
+ --  HISTORY               PARM  :node_col=node_id                                        ASC00490
+ --  HISTORY               PARM  :exptime=-1                                              ASC00491
+ --  HISTORY               PARM  :countfile=                                              ASC00492
+ --  HISTORY               PARM  :fracfile=                                               ASC00493
+ --  HISTORY               PARM  :timefile=                                               ASC00494
+ --  HISTORY               PARM  :verbose=0                                               ASC00495
+ --  HISTORY               PARM  :clobber=no                                              ASC00496
+ --  HISTORY               TOOL  :acis_process_events   2017-12-25T19:06:55               ASC00497
+ --  HISTORY               PARM  :infile=/Users/pavanrh/UofA_projects/47TucW/2002_data/273ASC00498
+ --  HISTORY               CONT  :5/repro/acisf02735_reset_evt1.fits                      ASC00499
+ --  HISTORY               PARM  :outfile=/Users/pavanrh/UofA_projects/47TucW/2002_data/27ASC00500
+ --  HISTORY               CONT  :35/repro/acisf02735_repro_evt1.fits                     ASC00501
+ --  HISTORY               PARM  :acaofffile=@/Users/pavanrh/UofA_projects/47TucW/2002_datASC00502
+ --  HISTORY               CONT  :a/2735/repro/acisf02735_asol1.lis                       ASC00503
+ --  HISTORY               STCK  :/Users/pavanrh/UofA_projects/47TucW/2002_data/2735/primaASC00504
+ --  HISTORY               CONT  :ry/pcadf149706672N003_asol1.fits                        ASC00505
+ --  HISTORY               PARM  :apply_cti=yes                                           ASC00506
+ --  HISTORY               PARM  :apply_tgain=yes                                         ASC00507
+ --  HISTORY               PARM  :alignmentfile=@/Users/pavanrh/UofA_projects/47TucW/2002_ASC00508
+ --  HISTORY               CONT  :data/2735/repro/acisf02735_asol1.lis                    ASC00509
+ --  HISTORY               STCK  :/Users/pavanrh/UofA_projects/47TucW/2002_data/2735/primaASC00510
+ --  HISTORY               CONT  :ry/pcadf149706672N003_asol1.fits                        ASC00511
+ --  HISTORY               PARM  :obsfile=NONE                                            ASC00512
+ --  HISTORY               PARM  :geompar=geom                                            ASC00513
+ --  HISTORY               PARM  :logfile=stdout                                          ASC00514
+ --  HISTORY               PARM  :gradefile=CALDB                                         ASC00515
+ --  HISTORY               PARM  :grade_image_file=CALDB                                  ASC00516
+ --  HISTORY               PARM  :gainfile=CALDB                                          ASC00517
+ --  HISTORY               PARM  :badpixfile=/Users/pavanrh/UofA_projects/47TucW/2002_dataASC00518
+ --  HISTORY               CONT  :/2735/repro/acisf02735_repro_bpix1.fits                 ASC00519
+ --  HISTORY               PARM  :threshfile=CALDB                                        ASC00520
+ --  HISTORY               PARM  :ctifile=CALDB                                           ASC00521
+ --  HISTORY               PARM  :tgainfile=CALDB                                         ASC00522
+ --  HISTORY               PARM  :mtlfile=/Users/pavanrh/UofA_projects/47TucW/2002_data/27ASC00523
+ --  HISTORY               CONT  :35/secondary/acisf02735_000N003_mtl1.fits               ASC00524
+ --  HISTORY               PARM  :eventdef={d:time,l:expno,s:ccd_id,s:node_id,s:chip,s:tdeASC00525
+ --  HISTORY               CONT  :t,f:det,f:sky,s:phas,l:pha,l:pha_ro,f:energy,l:pi,s:fltgASC00526
+ --  HISTORY               CONT  :rade,s:grade,x:status}                                  ASC00527
+ --  HISTORY               PARM  :doevtgrade=yes                                          ASC00528
+ --  HISTORY               PARM  :check_vf_pha=no                                         ASC00529
+ --  HISTORY               PARM  :trail=0.027                                             ASC00530
+ --  HISTORY               PARM  :time_offset=0                                           ASC00531
+ --  HISTORY               PARM  :calculate_pi=yes                                        ASC00532
+ --  HISTORY               PARM  :pi_bin_width=14.6                                       ASC00533
+ --  HISTORY               PARM  :pi_num_bins=1024                                        ASC00534
+ --  HISTORY               PARM  :max_cti_iter=15                                         ASC00535
+ --  HISTORY               PARM  :cti_converge=0.1                                        ASC00536
+ --  HISTORY               PARM  :tstart=TSTART                                           ASC00537
+ --  HISTORY               PARM  :tstop=TSTOP                                             ASC00538
+ --  HISTORY               PARM  :clobber=no                                              ASC00539
+ --  HISTORY               PARM  :verbose=0                                               ASC00540
+ --  HISTORY               PARM  :stop=sky                                                ASC00541
+ --  HISTORY               PARM  :instrume=acis                                           ASC00542
+ --  HISTORY               PARM  :rand_seed=1                                             ASC00543
+ --  HISTORY               PARM  :rand_pha=yes                                            ASC00544
+ --  HISTORY               PARM  :pix_adj=EDSER                                           ASC00545
+ --  HISTORY               PARM  :subpixfile=CALDB                                        ASC00546
+ --  HISTORY               PARM  :stdlev1={d:time,l:expno,s:ccd_id,s:node_id,s:chip,s:tdetASC00547
+ --  HISTORY               CONT  :,f:det,f:sky,s:phas,l:pha,l:pha_ro,f:energy,l:pi,s:fltgrASC00548
+ --  HISTORY               CONT  :ade,s:grade,x:status}                                   ASC00549
+ --  HISTORY               PARM  :grdlev1={d:time,l:expno,s:ccd_id,s:node_id,s:chip,s:tdetASC00550
+ --  HISTORY               CONT  :,f:det,f:sky,l:pha,l:pha_ro,s:corn_pha,f:energy,l:pi,s:fASC00551
+ --  HISTORY               CONT  :ltgrade,s:grade,x:status}                               ASC00552
+ --  HISTORY               PARM  :cclev1={d:time,d:time_ro,l:expno,s:ccd_id,s:node_id,s:chASC00553
+ --  HISTORY               CONT  :ip,s:tdet,f:det,f:sky,f:sky_1d,s:phas,l:pha,l:pha_ro,f:eASC00554
+ --  HISTORY               CONT  :nergy,l:pi,s:fltgrade,s:grade,x:status}                 ASC00555
+ --  HISTORY               PARM  :ccgrdlev1={d:time,d:time_ro,l:expno,s:ccd_id,s:node_id,sASC00556
+ --  HISTORY               CONT  ::chip,s:tdet,f:det,f:sky,f:sky_1d,l:pha,l:pha_ro,s:corn_ASC00557
+ --  HISTORY               CONT  :pha,f:energy,l:pi,s:fltgrade,s:grade,x:status}          ASC00558
+ --  HISTORY               PARM  :cclev1a={d:time,d:time_ro,l:expno,s:ccd_id,s:node_id,s:cASC00559
+ --  HISTORY               CONT  :hip,f:chipy_tg,f:chipy_zo,s:tdet,f:det,f:sky,f:sky_1d,s:ASC00560
+ --  HISTORY               CONT  :phas,l:pha,l:pha_ro,f:energy,l:pi,s:fltgrade,s:grade,f:rASC00561
+ --  HISTORY               CONT  :d,s:tg_m,f:tg_lam,f:tg_mlam,s:tg_srcid,s:tg_part,s:tg_smASC00562
+ --  HISTORY               CONT  :ap,x:status}                                            ASC00563
+ --  HISTORY               PARM  :ccgrdlev1a={d:time,d:time_ro,l:expno,s:ccd_id,s:node_id,ASC00564
+ --  HISTORY               CONT  :s:chip,f:chipy_tg,f:chipy_zo,s:tdet,f:det,f:sky,f:sky_1dASC00565
+ --  HISTORY               CONT  :,l:pha,l:pha_ro,s:corn_pha,f:energy,l:pi,s:fltgrade,s:grASC00566
+ --  HISTORY               CONT  :ade,f:rd,s:tg_m,f:tg_lam,f:tg_mlam,s:tg_srcid,s:tg_part,ASC00567
+ --  HISTORY               CONT  :s:tg_smap,x:status}                                     ASC00568
+ --  HISTORY               PARM  :PIXLIB Version: 4.0.0                                   ASC00569
+ --  HISTORY               PARM  :******     PIXLIB Parameter File      *****             ASC00570
+ --  HISTORY               PARM  :/Users/pavanrh/bin_astro/ciao-4.9/param/geom.par:       ASC00571
+ --  HISTORY               PARM  :instruments  = /Users/pavanrh/bin_astro/ciao-4.9/CALDB/dASC00572
+ --  HISTORY               CONT  :ata/chandra/default/geom/telD1999-07-23geomN0006.fits(CAASC00573
+ --  HISTORY               CONT  :LDB)                                                    ASC00574
+ --  HISTORY               PARM  :aimpoints    = /Users/pavanrh/bin_astro/ciao-4.9/CALDB/dASC00575
+ --  HISTORY               CONT  :ata/chandra/default/aimpts/telD1999-07-23aimptsN0002.fitASC00576
+ --  HISTORY               CONT  :s(CALDB)                                                ASC00577
+ --  HISTORY               PARM  :tdet         = /Users/pavanrh/bin_astro/ciao-4.9/CALDB/dASC00578
+ --  HISTORY               CONT  :ata/chandra/default/tdet/telD1999-07-23tdetN0001.fits(CAASC00579
+ --  HISTORY               CONT  :LDB)                                                    ASC00580
+ --  HISTORY               PARM  :sky          = /Users/pavanrh/bin_astro/ciao-4.9/CALDB/dASC00581
+ --  HISTORY               CONT  :ata/chandra/default/sky/telD1999-07-23skyN0002.fits(CALDASC00582
+ --  HISTORY               CONT  :B)                                                      ASC00583
+ --  HISTORY               PARM  :shell        = /Users/pavanrh/bin_astro/ciao-4.9/CALDB/dASC00584
+ --  HISTORY               CONT  :ata/chandra/default/sgeom/telD1999-07-23sgeomN0001.fits(ASC00585
+ --  HISTORY               CONT  :CALDB)                                                  ASC00586
+ --  HISTORY               PARM  :obsfile      = nowT00:00:00()                           ASC00587
+ --  HISTORY               PARM  :******     PIXLIB System Configuration      ******      ASC00588
+ --  HISTORY               PARM  :Telescope = FLIGHT                                      ASC00589
+ --  HISTORY               PARM  :Focal Length (mm) = 10070.000                           ASC00590
+ --  HISTORY               PARM  :Detector = ACIS                                         ASC00591
+ --  HISTORY               PARM  :Focal Plane Sys. = FP-1.1                               ASC00592
+ --  HISTORY               PARM  :Tiled Detector Plane Sys. = ACIS-2.2                    ASC00593
+ --  HISTORY               PARM  :SIM Offset (mm) = (0.684 0.75 236.552)                  ASC00594
+ --  HISTORY               PARM  :Aim Point(NONE) (mm) = (-0.682823 0 -190.14)            ASC00595
+ --  HISTORY               PARM  :Grating Arm = HEG                                       ASC00596
+ --  HISTORY               PARM  :Grating Order =  1                                      ASC00597
+ --  HISTORY               PARM  :Dispersion Plane Sys. = ASC-GDP-1.1                     ASC00598
+ --  HISTORY               PARM  :Rowland Circle (mm) = 8632.48                           ASC00599
+ --  HISTORY               PARM  :Stage Ang (arc-mins) = (0 0 0)                          ASC00600
+ --  HISTORY               PARM  :Stage Pos (mm) = (0 0 0)                                ASC00601
+ --  HISTORY               PARM  :Pitch-Yaw (arc-mins) = (0 0           )                 ASC00602
+ --  HISTORY               TOOL  :dmcopy   2017-12-25T19:09:46                            ASC00603
+ --  HISTORY               PARM  :infile=/Users/pavanrh/UofA_projects/47TucW/2002_data/273ASC00604
+ --  HISTORY               CONT  :5/repro/acisf02735_repro_evt1.fits[EVENTS][grade=0,2,3,4ASC00605
+ --  HISTORY               CONT  :,6,status=0,x=:,y=:]                                    ASC00606
+ --  HISTORY               PARM  :outfile=/Users/pavanrh/UofA_projects/47TucW/2002_data/27ASC00607
+ --  HISTORY               CONT  :35/repro/acisf02735_reprofilt_evt1.fits                 ASC00608
+ --  HISTORY               PARM  :kernel=default                                          ASC00609
+ --  HISTORY               PARM  :option=                                                 ASC00610
+ --  HISTORY               PARM  :verbose=0                                               ASC00611
+ --  HISTORY               PARM  :clobber=no                                              ASC00612
+0154 STATFILT             00000000000000000000000000000000 String       Status bit filter applied
+ --  HISTORY               TOOL  :dmhedit   2017-12-25T19:09:46                           ASC00613
+ --  HISTORY               PARM  :infile=/Users/pavanrh/UofA_projects/47TucW/2002_data/273ASC00614
+ --  HISTORY               CONT  :5/repro/acisf02735_reprofilt_evt1.fits                  ASC00615
+ --  HISTORY               PARM  :filelist=                                               ASC00616
+ --  HISTORY               PARM  :operation=add                                           ASC00617
+ --  HISTORY               PARM  :key=STATFILT                                            ASC00618
+ --  HISTORY               PARM  :value=00000000000000000000000000000000                  ASC00619
+ --  HISTORY               PARM  :datatype=string                                         ASC00620
+ --  HISTORY               PARM  :unit=                                                   ASC00621
+ --  HISTORY               PARM  :comment=Status bit filter applied                       ASC00622
+ --  HISTORY               PARM  :verbose=0                                               ASC00623
+ --  HISTORY               TOOL  :dmcopy   2017-12-25T19:09:46                            ASC00624
+ --  HISTORY               PARM  :infile=/Users/pavanrh/UofA_projects/47TucW/2002_data/273ASC00625
+ --  HISTORY               CONT  :5/repro/acisf02735_reprofilt_evt1.fits[EVENTS][@/Users/pASC00626
+ --  HISTORY               CONT  :avanrh/UofA_projects/47TucW/2002_data/2735/repro/acisf02ASC00627
+ --  HISTORY               CONT  :735_repro_flt2.fits]                                    ASC00628
+ --  HISTORY               PARM  :outfile=/Users/pavanrh/UofA_projects/47TucW/2002_data/27ASC00629
+ --  HISTORY               CONT  :35/repro/acisf02735_repro_evt2.fits                     ASC00630
+ --  HISTORY               PARM  :kernel=default                                          ASC00631
+ --  HISTORY               PARM  :option=                                                 ASC00632
+ --  HISTORY               PARM  :verbose=0                                               ASC00633
+ --  HISTORY               PARM  :clobber=no                                              ASC00634
+ --  COMMENT              chandra_repro version 07 July 2017
+ --  HISTORY               TOOL  :chandra_repro   2017-12-25T19:09:47                     ASC00635
+ --  HISTORY               PARM  :indir=/Users/pavanrh/UofA_projects/47TucW/2002_data/2735ASC00636
+ --  HISTORY               PARM  :outdir=/Users/pavanrh/UofA_projects/47TucW/2002_data/273ASC00637
+ --  HISTORY               CONT  :5/repro                                                 ASC00638
+ --  HISTORY               PARM  :root=acisf02735                                         ASC00639
+ --  HISTORY               PARM  :badpixel=yes                                            ASC00640
+ --  HISTORY               PARM  :process_events=yes                                      ASC00641
+ --  HISTORY               PARM  :destreak=yes                                            ASC00642
+ --  HISTORY               PARM  :set_ardlib=no                                           ASC00643
+ --  HISTORY               PARM  :check_vf_pha=no                                         ASC00644
+ --  HISTORY               PARM  :pix_adj=edser                                           ASC00645
+ --  HISTORY               PARM  :recreate_tg_mask=no                                     ASC00646
+ --  HISTORY               PARM  :cleanup=yes                                             ASC00647
+ --  HISTORY               PARM  :clobber=yes                                             ASC00648
+ --  HISTORY               PARM  :verbose=1                                               ASC00649
+ --  COMMENT               chandra_repro was run with CALDB 4.7.6
+ --  HISTORY               TOOL  :dmhedit   2017-12-25T19:09:48                           ASC00650
+ --  HISTORY               PARM  :infile=/Users/pavanrh/UofA_projects/47TucW/2002_data/273ASC00651
+ --  HISTORY               CONT  :5/repro/acisf02735_repro_evt2.fits                      ASC00652
+ --  HISTORY               PARM  :filelist=                                               ASC00653
+ --  HISTORY               PARM  :operation=add                                           ASC00654
+ --  HISTORY               PARM  :key=COMMENT                                             ASC00655
+ --  HISTORY               PARM  :value=chandra_repro was run with CALDB 4.7.6            ASC00656
+ --  HISTORY               PARM  :datatype=indef                                          ASC00657
+ --  HISTORY               PARM  :unit=                                                   ASC00658
+ --  HISTORY               PARM  :comment=                                                ASC00659
+ --  HISTORY               PARM  :verbose=0                                               ASC00660
+ --  HISTORY               TOOL  :dmcopy   2017-12-26T05:49:07                            ASC00661
+ --  HISTORY               PARM  :infile=./acisf02735_repro_evt2.fits[sky=region(./47TucW_ASC00662
+ --  HISTORY               CONT  :1as_phy.reg)]                                           ASC00663
+ --  HISTORY               PARM  :outfile=../../../source/2002/2735/source_1as.evt        ASC00664
+ --  HISTORY               PARM  :kernel=default                                          ASC00665
+ --  HISTORY               PARM  :option=                                                 ASC00666
+ --  HISTORY               PARM  :verbose=0                                               ASC00667
+ --  HISTORY               PARM  :clobber=yes                                             ASC00668
