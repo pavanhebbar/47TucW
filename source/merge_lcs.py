@@ -50,8 +50,8 @@ def get_table(year_data, lc_en='full', num=''):
     totcounts, tot_time, tot_bg, tot_netcount = add_lcs(lclocs)
     tot_netcount[np.where(tot_netcount < 0)] = 0.0
     sb_area_ratio = (totcounts - tot_netcount)*1.0/tot_bg
-    totc_up = totcounts + (totcounts)**0.5
-    totc_down = totcounts - (totcounts)**0.5
+    totc_up = totcounts + (totcounts + 0.75)**0.5 + 1.0
+    totc_down = totcounts - (totcounts - 0.25)**0.5
     totc_down[np.where(totc_down < 0)] = 0
     totbg_errup = 1.0 + (tot_bg + 0.75)**0.5
     totbg_errdown = (tot_bg - 0.25)**0.5
@@ -82,8 +82,8 @@ def get_table(year_data, lc_en='full', num=''):
                                               bg_col, netc_col, netcup_col,
                                               netcd_col],
                                              name=lc_en+' energy')
-    val = fit_lc(tot_netcount, tot_netcount**0.5)
-    print lc_en, val, get_chi2(tot_netcount, tot_netcount**0.5, val)
+    # val = fit_lc(tot_netcount, tot_netcount**0.5)
+    # print lc_en, val, get_chi2(tot_netcount, tot_netcount**0.5, val)
     if not np.sum(tot_netcount) == 0:
         plotfig(year_data+'/'+year_data+'_'+num+lc_en+'.png', 'phase',
                 'net counts', phase,
