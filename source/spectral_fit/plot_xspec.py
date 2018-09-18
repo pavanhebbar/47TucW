@@ -14,6 +14,15 @@ import matplotlib.gridspec as gridspec
 from matplotlib.ticker import FixedLocator, FixedFormatter, FormatStrFormatter
 
 
+def isfloat(string):
+    """Check if a string can be converted to float."""
+    try:
+        float(string)
+        return True
+    except ValueError:
+        return False
+
+
 def makeparser():
     """Construct parser."""
     parser = argparse.ArgumentParser(
@@ -142,6 +151,23 @@ def create_tcl(args):
     outfile.write('quit \n')
     outfile.write('y \n')
     outfile.close()
+
+
+def read_qdp(files):
+    """Read qdp files and return blocks of numeric data"""
+    # data_f = open(args.outroot + '_data.qdp')
+    data_f = open(files)
+    no_list = [2]
+    for nlines, line in enumerate(data_f.readlines()):
+        if line.split()[0] == 'NO':
+            no_list.append(nlines)
+    no_list.append(nlines+1)
+    data_blocks = []
+    for num, lineno in enumerate(no_list[:-1]):
+        data = np.genfromtxt(files, skip_header=lineno+1,
+                             skip_footer=nlines-no_list[num+1]+1)
+        data_blocks.append(data)
+    return data_blocks
 
 
 def plot_figure(args):
