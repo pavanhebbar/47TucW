@@ -1,5 +1,5 @@
 binsize=0.05
-binsize2=0.05
+binsize2=0.2
 for year_data in 2002 2005 2015
 do
 	year_data=$(basename $year_data)

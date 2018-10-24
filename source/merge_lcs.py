@@ -97,7 +97,7 @@ def make_fits(year_data):
     prheader['EXTEND'] = 'T'
     nums = ['', '0', '1', '2', '3']
     for num in nums:
-        print num
+        print(num)
         hdu0 = fits.PrimaryHDU(header=prheader)
         hdu1 = get_table(year_data, 'full', num)
         if year_data == "2005":
