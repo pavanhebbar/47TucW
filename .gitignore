@@ -4,3 +4,6 @@
 # Ignore all data files
 *_data/
 *_data/**
+
+# Ignore all .asol files
+*.asol*
